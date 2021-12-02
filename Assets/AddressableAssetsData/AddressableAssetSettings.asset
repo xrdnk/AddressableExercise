@@ -84,6 +84,11 @@ MonoBehaviour:
   m_LabelTable:
     m_LabelNames:
     - default
+    - onepiece
+    - luffy
+    - zoro
+    - sanji
+    - data
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: a706e28748cd8d649ba89093f6be4e78, type: 2}

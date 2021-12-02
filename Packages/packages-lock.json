@@ -1,5 +1,33 @@
 {
   "dependencies": {
+    "com.cysharp.unitask": {
+      "version": "2.2.5",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
+    "com.harumak.fancycarouselview": {
+      "version": "https://github.com/Haruma-K/FancyCarouselView.git?path=/Assets/FancyCarouselView",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "dd0f2f6e5640145c3276a9cb2e0bdeac8ca04908"
+    },
+    "com.neuecc.unirx": {
+      "version": "7.1.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
+    "com.svermeulen.extenject": {
+      "version": "9.2.0-stcf3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "com.unity.addressables": {
       "version": "1.19.11",
       "depth": 0,
@@ -200,6 +228,13 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "jp.setchi.fancyscrollview": {
+      "version": "https://github.com/setchi/FancyScrollView.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "e5d10d3e5961848f93be43c2911344750b509a88"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

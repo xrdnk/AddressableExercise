@@ -16,7 +16,33 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 0599de07931295c44b1fcb5f27a16abb
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 41f478b1d952caa41a3e19b391f1201f
+    m_Address: Luffy
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - onepiece
+    - luffy
+  - m_GUID: 451e46d0473d0f641b0985b5e4af2355
+    m_Address: Zoro
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - onepiece
+    - preload
+    - zoro
+  - m_GUID: 1cbc4ada426344b4e9d65dee4a366d4d
+    m_Address: Sanji
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - onepiece
+    - preload
+    - sanji
+  - m_GUID: 1a2039ca379c0d646a9694926fab6378
+    m_Address: OnePieceData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - onepiece
+    - data
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1d98662c681d9c644aee63db64ea44c8, type: 2}
   m_SchemaSet:

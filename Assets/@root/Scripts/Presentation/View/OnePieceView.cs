@@ -9,24 +9,19 @@ namespace Deniverse.AddressableExercise.View
         [SerializeField] List<Image> _images;
         [SerializeField] List<Text> _texts;
 
-        readonly List<Sprite> _sprites = new(3);
-        readonly List<string> _names = new(3);
-
         public void SetImages(IReadOnlyList<Sprite> sprites)
         {
-            for (var i = 0; i < _sprites.Count ; i++)
+            for (var i = 0; i < sprites.Count ; i++)
             {
-                _sprites[i] = sprites[i];
-                _images[i].sprite = _sprites[i];
+                _images[i].sprite = sprites[i];
             }
         }
 
-        public void SetName(IReadOnlyList<string> names)
+        public void SetNames(IReadOnlyList<string> names)
         {
-            for (var i = 0; i < _names.Count; i++)
+            for (var i = 0; i < names.Count; i++)
             {
-                _names[i] = names[i];
-                _texts[i].text = _names[i];
+                _texts[i].text = names[i];
             }
         }
     }
