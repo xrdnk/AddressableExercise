@@ -43,6 +43,11 @@ MonoBehaviour:
     m_SerializedLabels:
     - onepiece
     - data
+  - m_GUID: 40aa683efa6799c4e8114010b8cfb437
+    m_Address: Modal
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - onepiece
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1d98662c681d9c644aee63db64ea44c8, type: 2}
   m_SchemaSet:

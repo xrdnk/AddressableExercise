@@ -1,8 +1,8 @@
 using System;
 using Deniverse.AddressableExercise.Domain.Infra.ResourceContent;
 using Deniverse.AddressableExercise.Domain.ResourceContent;
-using Deniverse.AddressableExercise.View;
-using root.Scripts.Presentation.Presenter;
+using Deniverse.AddressableExercise.Presentation.Presenter;
+using Deniverse.AddressableExercise.Presentation.View;
 using UnityEngine;
 using Zenject;
 

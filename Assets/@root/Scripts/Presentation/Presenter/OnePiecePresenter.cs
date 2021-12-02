@@ -1,11 +1,11 @@
 ﻿using System.Threading;
 using Cysharp.Threading.Tasks;
 using Deniverse.AddressableExercise.Domain.ResourceContent;
-using Deniverse.AddressableExercise.View;
+using Deniverse.AddressableExercise.Presentation.View;
 using UniRx;
 using Zenject;
 
-namespace root.Scripts.Presentation.Presenter
+namespace Deniverse.AddressableExercise.Presentation.Presenter
 {
     public sealed class OnePiecePresenter : IInitializable
     {

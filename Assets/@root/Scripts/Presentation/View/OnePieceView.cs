@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Deniverse.AddressableExercise.View
+namespace Deniverse.AddressableExercise.Presentation.View
 {
     public sealed class OnePieceView : MonoBehaviour
     {
