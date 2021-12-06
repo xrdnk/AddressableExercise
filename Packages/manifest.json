@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "com.cysharp.unitask": "2.2.5",
-    "com.harumak.fancycarouselview": "https://github.com/Haruma-K/FancyCarouselView.git?path=/Assets/FancyCarouselView",
     "com.neuecc.unirx": "7.1.0",
     "com.svermeulen.extenject": "9.2.0-stcf3",
     "com.unity.addressables": "1.19.13",
@@ -17,7 +16,6 @@
     "com.unity.toolchain.win-x86_64-linux-x86_64": "0.1.21-preview",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.7.5",
-    "jp.setchi.fancyscrollview": "https://github.com/setchi/FancyScrollView.git#upm",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
