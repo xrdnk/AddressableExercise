@@ -1,10 +1,6 @@
 ﻿using System;
-using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.ResourceProviders;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Deniverse.AddressableExercise.Presentation.View
@@ -16,8 +12,8 @@ namespace Deniverse.AddressableExercise.Presentation.View
         [SerializeField] Button _buttonLoadNamesAsync;
         [SerializeField] Button _buttonLoadModalAsync;
         [SerializeField] Button _buttonUnloadModalAsync;
-        // [SerializeField] InputField _inputFieldUnloadKey;
-        // [SerializeField] Button _buttonUnload;
+        [SerializeField] InputField _inputFieldUnloadKey;
+        [SerializeField] Button _buttonUnloadAsset;
 
         readonly Subject<Unit> _initializeSubject = new();
         public IObservable<Unit> OnInitializeAsObservable() => _initializeSubject;
@@ -28,8 +24,14 @@ namespace Deniverse.AddressableExercise.Presentation.View
         readonly Subject<Unit> _loadNamesAsyncSubject = new();
         public IObservable<Unit> OnLoadNamesAsyncAsObservable() => _loadNamesAsyncSubject;
 
-        const string ModalAddress = "Modal";
-        SceneInstance _sceneInstance;
+        readonly Subject<Unit> _loadModalAsyncSubject = new();
+        public IObservable<Unit> OnLoadModalAsyncAsObservable() => _loadModalAsyncSubject;
+
+        readonly Subject<Unit> _unloadModalAsyncSubject = new();
+        public IObservable<Unit> OnUnloadModalAsyncAsObservable() => _unloadModalAsyncSubject;
+
+        readonly Subject<string> unloadAssetAsObservable = new();
+        public IObservable<string> OnUnloadAssetAsObservable() => unloadAssetAsObservable;
 
         void Awake()
         {
@@ -37,26 +39,27 @@ namespace Deniverse.AddressableExercise.Presentation.View
                 .Subscribe(_ => _initializeSubject.OnNext(Unit.Default))
                 .AddTo(this);
 
+            // NOTE: 連打するとリリースできない
             _buttonLoadSpritesAsync.OnClickAsObservable()
                 .Subscribe(_ => _loadSpritesAsyncSubject.OnNext(Unit.Default))
                 .AddTo(this);
 
+            // NOTE: 連打するとリリースできない
             _buttonLoadNamesAsync.OnClickAsObservable()
                 .Subscribe(_ => _loadNamesAsyncSubject.OnNext(Unit.Default))
                 .AddTo(this);
 
             _buttonLoadModalAsync.OnClickAsObservable()
-                .Subscribe(_ =>
-                {
-                    UniTask.Void(async () =>
-                    {
-                        _sceneInstance = await Addressables.LoadSceneAsync(ModalAddress, LoadSceneMode.Additive);
-                    });
-                })
+                .Subscribe(_ => _loadModalAsyncSubject.OnNext(Unit.Default))
                 .AddTo(this);
 
             _buttonUnloadModalAsync.OnClickAsObservable()
-                .Subscribe(_ => Addressables.UnloadSceneAsync(_sceneInstance))
+                .Subscribe(_ => _unloadModalAsyncSubject.OnNext(Unit.Default))
+                .AddTo(this);
+
+            _buttonUnloadAsset.OnClickAsObservable()
+                .Where(_ => !string.IsNullOrEmpty(_inputFieldUnloadKey.text))
+                .Subscribe(_ => unloadAssetAsObservable.OnNext(_inputFieldUnloadKey.text))
                 .AddTo(this);
         }
     }

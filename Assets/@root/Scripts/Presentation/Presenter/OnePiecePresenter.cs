@@ -56,6 +56,25 @@ namespace Deniverse.AddressableExercise.Presentation.Presenter
                     });
                 })
                 .AddTo(_disposable);
+
+            _operationView.OnLoadModalAsyncAsObservable()
+                .Subscribe(_ =>
+                {
+                    UniTask.Void(async () =>
+                    {
+                        var cts = new CancellationTokenSource();
+                        await _resourceLoader.LoadModalAsync(cts.Token);
+                    });
+                })
+                .AddTo(_disposable);
+
+            _operationView.OnUnloadModalAsyncAsObservable()
+                .Subscribe(_ => _resourceLoader.UnloadModal())
+                .AddTo(_disposable);
+
+            _operationView.OnUnloadAssetAsObservable()
+                .Subscribe(key => _resourceLoader.Unload(key))
+                .AddTo(_disposable);
         }
     }
 }

@@ -10,6 +10,8 @@ namespace Deniverse.AddressableExercise.Domain.ResourceContent
         UniTask InitializeAsync();
         UniTask<List<Sprite>> LoadSpritesAsync(CancellationToken token);
         UniTask<List<string>> LoadNamesAsync(CancellationToken token);
+        UniTask LoadModalAsync(CancellationToken token);
+        void UnloadModal();
         void Unload(string key = null);
     }
 

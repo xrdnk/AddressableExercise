@@ -22,6 +22,15 @@ namespace Deniverse.AddressableExercise.Domain.ResourceContent
             return default;
         }
 
+        public UniTask LoadModalAsync(CancellationToken token)
+        {
+            return default;
+        }
+
+        public void UnloadModal()
+        {
+        }
+
         public void Unload(string key = null)
         {
         }
