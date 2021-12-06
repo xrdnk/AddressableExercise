@@ -1,6 +1,14 @@
 # AddressableExercise
 Addressable 社内勉強会用のリポジトリ
 
+# Dependencies
+
+- Unity 2021.2.5f1
+- UniRx 7.1.0
+- UniTask 2.2.5
+- Extenject 9.2.0-stcf3
+- Addressables 1.19.13
+
 # 課題
 
 - Addressables とは
