@@ -64,20 +64,6 @@ MonoBehaviour:
         m_Value: ServerData/[BuildTarget]
       - m_Id: f67b035dfabc2994eb68e446e58447e3
         m_Value: http://[PrivateIpAddress]:[HostingServicePort]
-    - m_InheritedParent: 
-      m_Id: ff0e30bfff873a347960196056dbe124
-      m_ProfileName: CCD
-      m_Values:
-      - m_Id: d3d3eca10aac6604280ae61619462e43
-        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
-      - m_Id: c5d3b4b5ba79d8f44830214e9c6dfa46
-        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
-      - m_Id: 582d126c98d71164cbcca710845d238c
-        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
-      - m_Id: 9dc19ac6d9012ed4bb9bfc253fe2c956
-        m_Value: CCDBuildData/373b57b6-3d64-4f07-a0dc-5e7e5a564b00/latest
-      - m_Id: f67b035dfabc2994eb68e446e58447e3
-        m_Value: https://b0118532-5a3c-4af4-bdb7-6366ef24a4b7.client-api.unity3dusercontent.com/client_api/v1/buckets/373b57b6-3d64-4f07-a0dc-5e7e5a564b00/release_by_badge/latest/entry_by_path/content/?path=
     m_ProfileEntryNames:
     - m_Id: d3d3eca10aac6604280ae61619462e43
       m_Name: BuildTarget
@@ -125,6 +111,8 @@ MonoBehaviour:
     m_RegisteredServiceTypeRefs: []
     m_GlobalProfileVariablesInfos:
     - key: PrivateIpAddress
-      value: 192.168.100.18
+      value: 192.168.100.5
     - key: PrivateIpAddress_1
-      value: 172.17.192.1
+      value: 172.17.32.1
+    - key: PrivateIpAddress_2
+      value: 172.30.112.1
